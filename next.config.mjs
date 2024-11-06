@@ -12,6 +12,9 @@ const nextConfig = {
     includePaths: [join(__dirname, 'src/sass')],
     prependData: `@import "main.sass"`,
   },
+  images: {
+    domains: ['cdn.shopify.com'],  // Agregamos el dominio permitido para imágenes externas
+  },
 };
 
 export default nextConfig;

@@ -1,0 +1,1 @@
+export {CollectionsWrapper} from './CollectionsWrapper'

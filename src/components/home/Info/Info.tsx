@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from 'react';
-import styles from './Description.module.sass';
+import styles from './Info.module.sass';
 import Image from 'next/image';
 import classNames from 'classnames/bind';
 import { log } from 'console';
@@ -13,7 +13,7 @@ const PLaceHolderImage = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QB
 
 
 
-export const Description = ()=>{
+export const Info = ()=>{
     const[hasBorder, setBorder] = useState(false);
 
     const handleClick = ()=> setBorder(!hasBorder);
@@ -21,8 +21,8 @@ export const Description = ()=>{
     const cx = classNames.bind(styles)
 
 
-    const buttonStyles = cx('Description__button' ,{
-        'Description__button--border' : hasBorder,
+    const buttonStyles = cx('Info__button' ,{
+        'Info__button--border' : hasBorder,
     }); 
 
     console.log(buttonStyles)
@@ -32,11 +32,12 @@ export const Description = ()=>{
 
 
     return (
-        <section className={styles.Description}>
+        <section className={styles.Info}>
+             <h2>Tenemos el mejor equipo de seguridad</h2>
             <button onClick={handleClick} className={buttonStyles}>
-                <div className={styles.Description__imageContainer}>
+                <div className={styles.Info__imageContainer}>
                     <Image
-                    className={styles.Description__image} 
+                    className={styles.Info__image} 
                     src="/images/BIME.png" 
                     alt="products marketplace" 
                     fill
@@ -47,7 +48,7 @@ export const Description = ()=>{
                 </div>
             </button>
            
-           <h3>Tenemos el mejor equipo de seguridad</h3>
+           
             
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore dicta magnam, non ipsa ea eos omnis magni molestiae commodi vitae sint soluta cum! Voluptatum excepturi iusto sint praesentium aspernatur asperiores.</p>
            
