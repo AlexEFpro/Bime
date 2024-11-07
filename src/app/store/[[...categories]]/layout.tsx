@@ -1,12 +1,20 @@
-import React from 'react'
+import { fetchCollections} from "app/services/shopify/collections";
+import Link from "next/link";
 
-function Layout({children}:{children : React.ReactNode}) {
+export default async function Layout({children}:{children : React.ReactNode}) {
+  const arrayData = await fetchCollections()
+  
+  
+
+  console.log(arrayData);
   return (
-    <div>
-        <nav>Navegacion entre categorys</nav>
-        {children}
-    </div>
+    <main>
+       <nav>
+       </nav>
+       {children}
+    </main>
+       
+    
   )
-}
 
-export default Layout
+}

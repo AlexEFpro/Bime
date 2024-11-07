@@ -31,6 +31,7 @@ export interface Product {
   id: string;
   title: string;
   description: string;
+  handle: string;
   images: {
     edges: {
       node: ImageNode;

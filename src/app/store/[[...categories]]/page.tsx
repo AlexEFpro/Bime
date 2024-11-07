@@ -1,6 +1,6 @@
 import { ProductsWrapper } from "app/components/Store/ProductWraper";
 import { getProducts, Product, ProductType } from "app/services/shopify/products";
-import { fetchCollections } from "app/services/shopify/collections";
+
 
 
 interface  CategoryProps {
@@ -14,8 +14,7 @@ interface  CategoryProps {
 async function Category(props: CategoryProps) {
   //se obtienen los productos del servicio
   const shopifyProducts : Product[] = await getProducts();
-  const collections = await fetchCollections()
-  console.log(collections);
+  
   
   //adaptacion de Product a ProductType
   const products : ProductType[] =  shopifyProducts.map((product)=>({
