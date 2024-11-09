@@ -1,9 +1,11 @@
-import { fetchCollections} from "app/services/shopify/collections";
+import { fetchCollections} from "app/services/shopify/collections/collections";
 import Link from "next/link";
 
 export default async function Layout({children}:{children : React.ReactNode}) {
   const collections = await fetchCollections();
-  console.log(collections);
+  //console.log(collections);
+  
+  
   return (
     <main>
        <nav>

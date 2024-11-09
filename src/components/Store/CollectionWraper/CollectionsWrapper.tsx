@@ -1,4 +1,4 @@
-import { CollectionNode } from "app/services/shopify/collections";
+import { CollectionNode } from "app/services/shopify/collections/collections";
 import styles from "./CollectionWrapper.module.sass"
 
 export interface CollectionsWrapperProps {
